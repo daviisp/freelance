@@ -11,6 +11,7 @@ model MessagesUsers {
   id String @id @default(cuid())
   name String
   email String 
+  subject  String
   message String
 
   @@map("messages_users")

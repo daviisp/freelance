@@ -5,6 +5,7 @@ import { z } from "zod";
 const messageSchema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
+  subject: z.string().min(1),
   message: z.string().min(1),
 });
 
@@ -21,13 +22,14 @@ export const MessageController = {
   },
 
   save: async (request: Request, response: Response) => {
-    const { name, email, message } = messageSchema.parse(request.body);
+    const { name, email, subject, message } = messageSchema.parse(request.body);
 
     try {
       await prisma.messagesUsers.create({
         data: {
           name,
           email,
+          subject,
           message,
         },
       });
