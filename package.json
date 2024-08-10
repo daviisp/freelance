@@ -1,0 +1,21 @@
+{
+  "name": "project-freelancer",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tsx --watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "daviisp",
+  "license": "ISC",
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@prisma/client": "^5.18.0",
+    "express": "^4.19.2",
+    "tsx": "^4.17.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "prisma": "^5.18.0"
+  }
+}
